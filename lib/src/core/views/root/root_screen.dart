@@ -3,10 +3,12 @@ import 'package:brainconcent_flutter/src/core/utils/size_config.dart';
 import 'package:brainconcent_flutter/src/core/views/home/home_screen.dart';
 import 'package:brainconcent_flutter/src/core/views/games/games_screen.dart';
 import 'package:brainconcent_flutter/src/core/views/progress/progress_screen.dart';
-import 'package:brainconcent_flutter/src/core/views/settings/settings_screen.dart';
+import 'package:brainconcent_flutter/src/core/views/stories/stories_screen.dart';
+import 'package:brainconcent_flutter/src/features/profile/presentation/views/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class RootScreen extends StatefulWidget {
   const RootScreen({Key? key}) : super(key: key);
@@ -22,7 +24,8 @@ class RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
     const HomeScreen(),
     const GamesScreen(),
     const ProgressScreen(),
-    const SettingsScreen()
+    const StoriesScreen(),
+    const ProfileScreen(),
   ];
 
   @override
@@ -33,6 +36,17 @@ class RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
 
     return Scaffold(
       backgroundColor: kBackgroundColor,
+      appBar: AppBar(
+        title: Text(
+          'Brainconcent',
+          style: GoogleFonts.raleway(
+              color: kSecondaryColorTwo,
+              fontSize: width * 5,
+              fontWeight: FontWeight.w900),
+        ),
+        centerTitle: true,
+        automaticallyImplyLeading: false,
+      ),
       body: Stack(
         children: <Widget>[
           IndexedStack(index: currentIndex, children: pages),
@@ -44,7 +58,7 @@ class RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
   }
 
   Container _buildBottomNavigatorBar(double height, double width) => Container(
-        padding: EdgeInsets.symmetric(horizontal: width * 2),
+        padding: EdgeInsets.symmetric(horizontal: width * 1.5),
         margin: EdgeInsets.only(
             bottom: height * 2.3, left: width * 4, right: width * 4),
         decoration: BoxDecoration(
@@ -88,7 +102,7 @@ class RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
                 color: kPrimaryColor,
                 height: height * 3.3,
               ),
-              label: 'Juega',
+              label: 'Juegos',
               backgroundColor: kPrimaryColor,
             ),
             BottomNavigationBarItem(
@@ -107,16 +121,30 @@ class RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
-                'assets/icons/app/settings-linear.svg',
+                'assets/icons/app/video-linear.svg',
                 color: kGrayColor,
                 height: height * 3.3,
               ),
               activeIcon: SvgPicture.asset(
-                'assets/icons/app/settings-bold.svg',
+                'assets/icons/app/video-bold.svg',
                 color: kPrimaryColor,
                 height: height * 3.3,
               ),
-              label: 'Configuración',
+              label: 'Cuentos',
+              backgroundColor: kSecondaryColor,
+            ),
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                'assets/icons/app/user.svg',
+                color: kGrayColor,
+                height: height * 3.3,
+              ),
+              activeIcon: SvgPicture.asset(
+                'assets/icons/app/user-bold.svg',
+                color: kPrimaryColor,
+                height: height * 3.3,
+              ),
+              label: 'Perfil',
               backgroundColor: kSecondaryColor,
             ),
           ],

@@ -63,6 +63,13 @@ final kBodyText7 = TextStyle(
   decorationColor: kSecondaryColorTwo,
 );
 
+final kSettings = TextStyle(
+  fontSize: getProportionateScreenWidth(12.5),
+  fontWeight: FontWeight.w600,
+  color: kSecondaryColor,
+  decorationColor: kSecondaryColor,
+);
+
 final kInputBorder = OutlineInputBorder(
   borderRadius: BorderRadius.circular(12),
   borderSide: BorderSide.none,

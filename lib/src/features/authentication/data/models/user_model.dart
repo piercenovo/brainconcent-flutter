@@ -1,3 +1,45 @@
+// import 'dart:convert';
+
+// UserModel userFromJson(String str) => UserModel.fromJson(json.decode(str));
+
+// String userToJson(UserModel data) => json.encode(data.toJson());
+
+// class UserModel {
+//   UserModel({
+//     required this.name,
+//     required this.username,
+//     required this.email,
+//     required this.password,
+//     required this.avatar,
+//     required this.uid,
+//   });
+
+//   String name;
+//   String username;
+//   String email;
+//   String password;
+//   String avatar;
+//   String uid;
+
+//   factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
+//         name: json["name"],
+//         username: json["username"],
+//         email: json["email"],
+//         password: json["password"],
+//         avatar: json["avatar"],
+//         uid: json["uid"],
+//       );
+
+//   Map<String, dynamic> toJson() => {
+//         "name": name,
+//         "username": username,
+//         "email": email,
+//         "password": password,
+//         "avatar": avatar,
+//         "uid": uid,
+//       };
+// }
+
 import 'dart:convert';
 
 import 'package:brainconcent_flutter/src/features/authentication/domain/entities/user.dart';
@@ -13,7 +55,7 @@ class UserModel extends User {
     required String email,
     required String password,
     required String avatar,
-    String? uid,
+    required String uid,
   }) : super(
             name: name,
             username: username,
@@ -23,12 +65,12 @@ class UserModel extends User {
             uid: uid);
 
   factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
-        name: json["name"],
-        username: json["username"],
-        email: json["email"],
-        password: json["password"],
-        avatar: json["avatar"],
-        uid: json["uid"],
+        name: json["name"] ?? '',
+        username: json["username"] ?? '',
+        email: json["email"] ?? '',
+        password: json["password"] ?? '',
+        avatar: json["avatar"] ?? '',
+        uid: json["uid"] ?? '',
       );
 
   Map<String, dynamic> toJson() => {

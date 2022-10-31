@@ -19,3 +19,4 @@ Color kGrayColor = const Color(0xffD2D2D2);
 Color kGrayColorTwo = const Color(0xff808080);
 
 const kTextColor = Color(0xFF757575);
+const kTextLogout = Color(0xFFE33F3F);

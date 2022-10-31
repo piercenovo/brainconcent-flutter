@@ -4,6 +4,7 @@ import 'package:brainconcent_flutter/src/features/authentication/domain/response
 abstract class UserServices {
   Future<DefaultResponse> createUser(
       String name, String username, String email, String password);
+  // Future<UserModel> getUserById();
   Future<UserResponse> getUserById();
   Future<DefaultResponse> verifyEmail(String code, String email);
 }

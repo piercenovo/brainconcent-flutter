@@ -49,6 +49,7 @@ flutter:
     - assets/svg/authentication/
     - assets/icons/authentication/
     - assets/images/authentication/
+    - assets/images/avatar/
 
   fonts:
     - family: OpenSans

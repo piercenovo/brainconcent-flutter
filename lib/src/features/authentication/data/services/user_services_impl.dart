@@ -29,7 +29,7 @@ class UserServicesImpl implements UserServices {
     final token = await secureStorage.readToken();
 
     final resp = await http.get(
-        Uri.parse('${EnvironmentConfig.apiUrl}/user/get-user-token'),
+        Uri.parse('${EnvironmentConfig.apiUrl}/user/get-user-by-id'),
         headers: {'Accept': 'application/json', 'x-token': token!});
     return UserResponse.fromJson(jsonDecode(resp.body));
   }

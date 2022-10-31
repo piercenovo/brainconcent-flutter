@@ -1,17 +1,15 @@
+import 'package:brainconcent_flutter/src/features/authentication/data/models/user_model.dart';
 import 'package:brainconcent_flutter/src/features/authentication/data/services/user_services_impl.dart';
-import 'package:brainconcent_flutter/src/features/authentication/domain/entities/user.dart';
-import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'user_state.dart';
 
 class UserCubit extends Cubit<UserState> {
-  UserCubit() : super(UserInitial());
+  UserCubit() : super(const UserState());
 
   Future<void> getUserAuthentication() async {
     try {
       final data = await userServices.getUserById();
-
       emit(state.copyWith(user: data.user));
     } catch (e) {
       emit(FailureUserState(error: e.toString()));
