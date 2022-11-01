@@ -18,7 +18,7 @@ class _ProfileInfoState extends State<ProfileInfo> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: getProportionateScreenHeight(30)),
+        SizedBox(height: getProportionateScreenHeight(80)),
         SizedBox(
           width: getProportionateScreenWidth(100),
           height: getProportionateScreenHeight(100),

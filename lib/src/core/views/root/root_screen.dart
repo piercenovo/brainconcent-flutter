@@ -1,14 +1,13 @@
 import 'package:brainconcent_flutter/src/core/utils/colors.dart';
 import 'package:brainconcent_flutter/src/core/utils/size_config.dart';
-import 'package:brainconcent_flutter/src/core/views/home/home_screen.dart';
-import 'package:brainconcent_flutter/src/core/views/games/games_screen.dart';
-import 'package:brainconcent_flutter/src/core/views/progress/progress_screen.dart';
 import 'package:brainconcent_flutter/src/core/views/stories/stories_screen.dart';
+import 'package:brainconcent_flutter/src/features/games/presentation/views/games/games_screen.dart';
+import 'package:brainconcent_flutter/src/core/views/home/home_screen.dart';
+import 'package:brainconcent_flutter/src/core/views/progress/progress_screen.dart';
 import 'package:brainconcent_flutter/src/features/profile/presentation/views/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class RootScreen extends StatefulWidget {
   const RootScreen({Key? key}) : super(key: key);
@@ -35,18 +34,6 @@ class RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
     double height = SizeConfig.blockSizeV!;
 
     return Scaffold(
-      backgroundColor: kBackgroundColor,
-      appBar: AppBar(
-        title: Text(
-          'Brainconcent',
-          style: GoogleFonts.raleway(
-              color: kSecondaryColorTwo,
-              fontSize: width * 5,
-              fontWeight: FontWeight.w900),
-        ),
-        centerTitle: true,
-        automaticallyImplyLeading: false,
-      ),
       body: Stack(
         children: <Widget>[
           IndexedStack(index: currentIndex, children: pages),

@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:brainconcent_flutter/src/injection_container.dart';
 import 'features/authentication/presentation/cubit/auth/auth_cubit.dart';
 import 'features/authentication/presentation/cubit/user/user_cubit.dart';
+import 'features/games/presentation/cubit/games/games_cubit.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -19,12 +20,13 @@ class App extends StatelessWidget {
       providers: [
         BlocProvider(create: (_) => sl<AuthCubit>()..onCheckingLogin()),
         BlocProvider(create: (_) => sl<UserCubit>()),
+        BlocProvider(create: (_) => sl<GamesCubit>()..getGames()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Brainconcent',
         theme: theme(),
-        initialRoute: Routes.checkinglogin,
+        initialRoute: Routes.root,
         routes: appRoutes,
       ),
     );
