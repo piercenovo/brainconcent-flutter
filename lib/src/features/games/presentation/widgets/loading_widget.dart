@@ -14,7 +14,7 @@ class LoadingWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 20),
       child: SizedBox(
         width: width * 100,
-        height: height * 55,
+        height: height * 10,
         child: Center(
           child: SizedBox(
             height: 30,

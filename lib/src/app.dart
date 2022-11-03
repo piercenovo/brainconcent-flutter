@@ -8,6 +8,7 @@ import 'package:brainconcent_flutter/src/injection_container.dart';
 import 'features/authentication/presentation/cubit/auth/auth_cubit.dart';
 import 'features/authentication/presentation/cubit/user/user_cubit.dart';
 import 'features/games/presentation/cubit/games/games_cubit.dart';
+import 'features/characters/presentation/cubit/characters/characters_cubit.dart';
 import 'features/stories/presentation/cubit/stories/stories_cubit.dart';
 
 class App extends StatelessWidget {
@@ -23,6 +24,7 @@ class App extends StatelessWidget {
         BlocProvider(create: (_) => sl<UserCubit>()),
         BlocProvider(create: (_) => sl<GamesCubit>()..getGames()),
         BlocProvider(create: (_) => sl<StoriesCubit>()..getAllStories()),
+        BlocProvider(create: (_) => sl<CharactersCubit>()..getAllCharacters()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

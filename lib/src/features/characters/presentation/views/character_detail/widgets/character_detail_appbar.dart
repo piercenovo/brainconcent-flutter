@@ -1,16 +1,16 @@
 import 'package:brainconcent_flutter/src/core/utils/colors.dart';
 import 'package:brainconcent_flutter/src/core/utils/size_config.dart';
-import 'package:brainconcent_flutter/src/features/stories/domain/entities/story.dart';
+import 'package:brainconcent_flutter/src/features/characters/domain/entities/character.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class StoryDetailAppBar extends StatelessWidget {
-  const StoryDetailAppBar({
+class CharacterDetailAppBar extends StatelessWidget {
+  const CharacterDetailAppBar({
     Key? key,
-    required this.story,
+    required this.character,
   }) : super(key: key);
 
-  final Story story;
+  final Character character;
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -18,14 +18,14 @@ class StoryDetailAppBar extends StatelessWidget {
     double height = SizeConfig.blockSizeV!;
 
     return SliverAppBar(
-      expandedHeight: height * 30,
+      expandedHeight: height * 37,
       backgroundColor: Colors.white,
       elevation: 0.0,
       pinned: true,
       stretch: true,
       flexibleSpace: FlexibleSpaceBar(
-        background: Image.asset(
-          story.image,
+        background: Image.network(
+          character.detailImage,
           fit: BoxFit.cover,
         ),
         stretchModes: const [StretchMode.zoomBackground],

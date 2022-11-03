@@ -1,6 +1,7 @@
 import 'package:brainconcent_flutter/src/core/network/network_info.dart';
 import 'package:brainconcent_flutter/src/features/authentication/presentation/cubit/auth/auth_cubit.dart';
 import 'package:brainconcent_flutter/src/features/authentication/presentation/cubit/user/user_cubit.dart';
+import 'package:brainconcent_flutter/src/features/characters/presentation/cubit/characters/characters_cubit.dart';
 import 'package:brainconcent_flutter/src/features/games/data/datasources/local/cached_game_data_source.dart';
 import 'package:brainconcent_flutter/src/features/games/data/datasources/local/game_local_data_source.dart';
 import 'package:brainconcent_flutter/src/features/games/data/datasources/remote/game_remote_data_source.dart';
@@ -52,4 +53,8 @@ Future<void> init() async {
 // ! Features - stories
 // Bloc
   sl.registerFactory(() => StoriesCubit());
+
+// ! Features - characters
+// Bloc
+  sl.registerFactory(() => CharactersCubit());
 }

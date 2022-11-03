@@ -43,29 +43,21 @@ class GameDetailDescription extends StatelessWidget {
           ],
         ),
         SizedBox(height: height * 2.2),
-        // Container(
-        //   alignment: Alignment.center,
-        //   child: Text(
-        //     '¿Cómo se juega?',
-        //     style: TextStyle(
-        //       fontSize: width * 5.3,
-        //       fontWeight: FontWeight.w700,
-        //       color: kAccentColorTwo,
-        //     ),
-        //   ),
-        // ),
         Text(
           '¿Cómo se juega?',
           style: TextStyle(
               color: acentColor,
-              fontSize: width * 4,
+              fontSize: width * 4.2,
               fontWeight: FontWeight.w600),
         ),
         SizedBox(height: height * 1.8),
         Text(
           game.description,
           textAlign: TextAlign.justify,
-          style: TextStyle(color: kGrayColorTwo),
+          style: TextStyle(
+            color: kGrayColorTwo,
+            fontSize: width * 3.4,
+          ),
         ),
         SizedBox(height: height * 1.2),
         Text(
@@ -87,7 +79,7 @@ class GameDetailDescription extends StatelessWidget {
           width: width * 4,
         ),
         SizedBox(
-          width: width * 0.5,
+          width: width * 0.8,
         ),
         Text(
           text,

@@ -45,7 +45,7 @@ final kBodyText4 = TextStyle(
 );
 
 final kBodyText5 = TextStyle(
-  fontSize: getProportionateScreenWidth(11.7),
+  fontSize: getProportionateScreenWidth(12),
   fontWeight: FontWeight.w600,
   color: kSecondaryColorTwo,
 );

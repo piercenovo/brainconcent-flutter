@@ -53,7 +53,7 @@ class StoryDetailDescription extends StatelessWidget {
           'Descripción',
           style: TextStyle(
               color: acentColor,
-              fontSize: width * 4,
+              fontSize: width * 4.2,
               fontWeight: FontWeight.w600),
         ),
         SizedBox(height: height * 1.5),
@@ -62,6 +62,7 @@ class StoryDetailDescription extends StatelessWidget {
           textAlign: TextAlign.justify,
           style: TextStyle(
             color: kGrayColorTwo,
+            fontSize: width * 3.4,
           ),
         ),
         SizedBox(height: height * 2),
@@ -69,7 +70,7 @@ class StoryDetailDescription extends StatelessWidget {
           'Capítulos',
           style: TextStyle(
               color: acentColor,
-              fontSize: width * 4,
+              fontSize: width * 4.2,
               fontWeight: FontWeight.w600),
         ),
       ],
@@ -84,9 +85,7 @@ class StoryDetailDescription extends StatelessWidget {
           color: color,
           width: width * 4,
         ),
-        SizedBox(
-          width: width * 0.5,
-        ),
+        SizedBox(width: width * 0.8),
         Text(
           text,
           style: TextStyle(
