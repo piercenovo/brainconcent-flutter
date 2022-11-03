@@ -28,10 +28,7 @@ class GamesDetailAppBar extends StatelessWidget {
           game.image,
           fit: BoxFit.cover,
         ),
-        stretchModes: const [
-          StretchMode.blurBackground,
-          StretchMode.zoomBackground
-        ],
+        stretchModes: const [StretchMode.zoomBackground],
       ),
       leading: Padding(
         padding: EdgeInsets.only(left: width * 4),

@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:brainconcent_flutter/src/core/env/environment_config.dart';
 import 'package:brainconcent_flutter/src/features/games/data/datasources/remote/game_remote_data_source.dart';
 import 'package:brainconcent_flutter/src/features/games/data/models/game_model.dart';
+import 'package:brainconcent_flutter/src/features/games/domain/responses/games_response.dart';
 
 import '../../../../../core/error/exceptions.dart';
 import 'package:http/http.dart' as http;
@@ -20,11 +21,7 @@ class HttpGameDataSource implements GameRemoteDataSource {
     );
 
     if (response.statusCode == 200) {
-      final decodedJson = json.decode(response.body);
-      final List<GameModel> gameModels = decodedJson['games']
-          .map<GameModel>((jsonGameModel) => GameModel.fromJson(jsonGameModel))
-          .toList();
-      return gameModels;
+      return GamesResponse.fromJson(jsonDecode(response.body)).games;
     } else {
       throw ServerException();
     }

@@ -3,7 +3,7 @@ import 'package:brainconcent_flutter/src/features/games/presentation/views/games
 import 'package:brainconcent_flutter/src/features/games/presentation/views/games/widgets/games_appbar.dart';
 import 'package:brainconcent_flutter/src/features/games/presentation/widgets/error_message.dart';
 import 'package:brainconcent_flutter/src/features/games/presentation/widgets/loading_widget.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Body extends StatelessWidget {
@@ -14,8 +14,8 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
-      physics: const BouncingScrollPhysics(
-          parent: AlwaysScrollableScrollPhysics()),
+      physics:
+          const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
       slivers: [
         const GamesAppBar(),
         SliverToBoxAdapter(

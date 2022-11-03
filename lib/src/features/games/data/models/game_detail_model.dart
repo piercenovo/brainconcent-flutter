@@ -1,5 +1,5 @@
-class GameDetail {
-  GameDetail({
+class GameDetailModel {
+  GameDetailModel({
     required this.time,
     required this.tap,
     required this.date,
@@ -17,7 +17,8 @@ class GameDetail {
   String gdGame;
   String uid;
 
-  factory GameDetail.fromJson(Map<String, dynamic> json) => GameDetail(
+  factory GameDetailModel.fromJson(Map<String, dynamic> json) =>
+      GameDetailModel(
         time: json["time"],
         tap: json["tap"],
         date: DateTime.parse(json["date"]),

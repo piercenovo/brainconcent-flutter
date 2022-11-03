@@ -11,7 +11,7 @@ class GamesAppBar extends StatelessWidget {
     double height = SizeConfig.blockSizeV!;
 
     return SliverAppBar(
-      expandedHeight: height * 40,
+      expandedHeight: height * 42,
       backgroundColor: Colors.white,
       elevation: 0.0,
       pinned: true,
@@ -21,10 +21,7 @@ class GamesAppBar extends StatelessWidget {
           'assets/images/games/games-header.png',
           fit: BoxFit.cover,
         ),
-        stretchModes: const [
-          StretchMode.blurBackground,
-          StretchMode.zoomBackground
-        ],
+        stretchModes: const [StretchMode.zoomBackground],
       ),
       bottom: PreferredSize(
         preferredSize: const Size.fromHeight(1),

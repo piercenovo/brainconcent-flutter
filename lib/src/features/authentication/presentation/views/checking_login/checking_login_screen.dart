@@ -1,10 +1,9 @@
 import 'package:brainconcent_flutter/src/core/helpers/animation_route.dart';
+import 'package:brainconcent_flutter/src/core/utils/size_config.dart';
 import 'package:brainconcent_flutter/src/core/views/root/root_screen.dart';
-import 'package:brainconcent_flutter/src/core/utils/colors.dart';
 import 'package:brainconcent_flutter/src/features/authentication/presentation/cubit/auth/auth_cubit.dart';
 import 'package:brainconcent_flutter/src/features/authentication/presentation/cubit/user/user_cubit.dart';
 import 'package:brainconcent_flutter/src/features/authentication/presentation/views/onboarding/onboarding_screen.dart';
-import 'package:brainconcent_flutter/src/features/authentication/presentation/widgets/text_custom.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -50,6 +49,9 @@ class _CheckingLoginScreenState extends State<CheckingLoginScreen>
   Widget build(BuildContext context) {
     final userBloc = BlocProvider.of<UserCubit>(context);
 
+    SizeConfig().init(context);
+    double width = SizeConfig.blockSizeH!;
+
     return BlocListener<AuthCubit, AuthState>(
       listener: (context, state) {
         if (state is LogOutState) {
@@ -67,8 +69,8 @@ class _CheckingLoginScreenState extends State<CheckingLoginScreen>
           width: MediaQuery.of(context).size.width,
           child: Center(
             child: SizedBox(
-              height: 200,
-              width: 150,
+              width: width * 50,
+              height: width * 50,
               child: Column(
                 children: [
                   AnimatedBuilder(
@@ -76,8 +78,6 @@ class _CheckingLoginScreenState extends State<CheckingLoginScreen>
                       builder: (_, child) => Transform.scale(
                           scale: _scaleAnimation.value,
                           child: Image.asset('assets/images/app/brainy.png'))),
-                  const SizedBox(height: 10.0),
-                  TextCustom(text: 'Verificando...', color: kSecondaryColor)
                 ],
               ),
             ),

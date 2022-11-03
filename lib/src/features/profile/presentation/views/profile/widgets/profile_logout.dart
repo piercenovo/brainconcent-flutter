@@ -27,20 +27,24 @@ class ProfileLogout extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         color: kTextLogout,
         onPressed: press,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SvgPicture.asset(
-              icon,
-              color: kLightColor,
-              width: getProportionateScreenWidth(18),
-            ),
-            SizedBox(width: width * 6),
-            Text(text,
-                style: TextStyle(
-                  color: kLightColor,
-                )),
-          ],
+        child: Container(
+          height: height * 3.2,
+          padding: EdgeInsets.only(left: width * 5, right: width * 5),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SvgPicture.asset(
+                icon,
+                color: kLightColor,
+                width: getProportionateScreenWidth(18),
+              ),
+              SizedBox(width: width * 6),
+              Text(text,
+                  style: TextStyle(
+                    color: kLightColor,
+                  )),
+            ],
+          ),
         ),
       ),
     );

@@ -27,7 +27,7 @@ class Body extends StatelessWidget {
         GamesDetailAppBar(game: game),
         SliverToBoxAdapter(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * 5.5),
+            padding: EdgeInsets.symmetric(horizontal: width * 6),
             child: Column(children: [
               GameDetailDescription(height: height, game: game, width: width),
               GameDetailSkills(width: width, game: game, height: height),

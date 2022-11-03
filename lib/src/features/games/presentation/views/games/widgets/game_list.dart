@@ -38,7 +38,7 @@ class GameList extends StatelessWidget {
         );
       },
       child: SizedBox(
-        width: width * 90,
+        width: width * 85,
         child: Column(children: [
           SizedBox(height: height * 1.5),
           AspectRatio(

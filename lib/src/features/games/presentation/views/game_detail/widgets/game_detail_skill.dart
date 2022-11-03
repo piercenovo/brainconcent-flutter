@@ -37,8 +37,8 @@ class GameDetailSkill extends StatelessWidget {
               Text(skillTiles,
                   style: TextStyle(
                       fontSize: width * 3.4,
-                      fontWeight: FontWeight.w600,
-                      color: darkColor.withOpacity(0.9))),
+                      fontWeight: FontWeight.w500,
+                      color: kTextColor.withOpacity(0.9))),
             ],
           ),
         ));

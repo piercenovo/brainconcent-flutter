@@ -1,10 +1,10 @@
 import 'package:brainconcent_flutter/src/core/utils/colors.dart';
 import 'package:brainconcent_flutter/src/core/utils/size_config.dart';
-import 'package:brainconcent_flutter/src/core/views/stories/stories_screen.dart';
-import 'package:brainconcent_flutter/src/features/games/presentation/views/games/games_screen.dart';
 import 'package:brainconcent_flutter/src/core/views/home/home_screen.dart';
+import 'package:brainconcent_flutter/src/features/games/presentation/views/games/games_screen.dart';
 import 'package:brainconcent_flutter/src/core/views/progress/progress_screen.dart';
 import 'package:brainconcent_flutter/src/features/profile/presentation/views/profile/profile_screen.dart';
+import 'package:brainconcent_flutter/src/features/stories/presentation/views/stories/stories_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';

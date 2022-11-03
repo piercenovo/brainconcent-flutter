@@ -9,6 +9,7 @@ import 'package:brainconcent_flutter/src/features/games/data/repositories/games_
 import 'package:brainconcent_flutter/src/features/games/domain/repositories/games_repository.dart';
 import 'package:brainconcent_flutter/src/features/games/domain/usecases/get_all_games.dart';
 import 'package:brainconcent_flutter/src/features/games/presentation/cubit/games/games_cubit.dart';
+import 'package:brainconcent_flutter/src/features/stories/presentation/cubit/stories/stories_cubit.dart';
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -47,4 +48,8 @@ Future<void> init() async {
 // Bloc
   sl.registerFactory(() => AuthCubit());
   sl.registerFactory(() => UserCubit());
+
+// ! Features - stories
+// Bloc
+  sl.registerFactory(() => StoriesCubit());
 }

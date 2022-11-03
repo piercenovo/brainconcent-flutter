@@ -28,7 +28,8 @@ class ProfileMenu extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         color: kGreyColor,
         onPressed: press,
-        child: Padding(
+        child: Container(
+          height: height * 3.2,
           padding: EdgeInsets.only(left: width * 5, right: width * 5),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -38,7 +39,6 @@ class ProfileMenu extends StatelessWidget {
                 color: kPrimaryColor,
                 width: getProportionateScreenWidth(18),
               ),
-              // const SizedBox(width: 20),
               Text(text, maxLines: 1, style: kSettings),
               SvgPicture.asset(
                 'assets/icons/app/arrow-right.svg',
