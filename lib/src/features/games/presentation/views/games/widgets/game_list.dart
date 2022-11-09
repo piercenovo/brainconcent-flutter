@@ -1,5 +1,5 @@
 import 'package:brainconcent_flutter/src/core/utils/size_config.dart';
-import 'package:brainconcent_flutter/src/features/games/domain/entities/game.dart';
+import 'package:brainconcent_flutter/src/features/games/domain/entities/game/game.dart';
 import 'package:brainconcent_flutter/src/features/games/presentation/views/game_detail/game_detail_screen.dart';
 import 'package:flutter/material.dart';
 

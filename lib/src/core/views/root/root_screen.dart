@@ -2,7 +2,6 @@ import 'package:brainconcent_flutter/src/core/utils/colors.dart';
 import 'package:brainconcent_flutter/src/core/utils/size_config.dart';
 import 'package:brainconcent_flutter/src/core/views/home/home_screen.dart';
 import 'package:brainconcent_flutter/src/features/games/presentation/views/games/games_screen.dart';
-import 'package:brainconcent_flutter/src/core/views/progress/progress_screen.dart';
 import 'package:brainconcent_flutter/src/features/profile/presentation/views/profile/profile_screen.dart';
 import 'package:brainconcent_flutter/src/features/stories/presentation/views/stories/stories_screen.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +21,7 @@ class RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
   final pages = [
     const HomeScreen(),
     const GamesScreen(),
-    const ProgressScreen(),
+    // const ProgressScreen(),
     const StoriesScreen(),
     const ProfileScreen(),
   ];
@@ -92,20 +91,20 @@ class RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
               label: 'Juegos',
               backgroundColor: kPrimaryColor,
             ),
-            BottomNavigationBarItem(
-              icon: SvgPicture.asset(
-                'assets/icons/app/statusup-linear.svg',
-                color: kGrayColor,
-                height: height * 3.3,
-              ),
-              activeIcon: SvgPicture.asset(
-                'assets/icons/app/statusup-bold.svg',
-                color: kPrimaryColor,
-                height: height * 3.3,
-              ),
-              label: 'Progreso',
-              backgroundColor: kSecondaryColor,
-            ),
+            // BottomNavigationBarItem(
+            //   icon: SvgPicture.asset(
+            //     'assets/icons/app/statusup-linear.svg',
+            //     color: kGrayColor,
+            //     height: height * 3.3,
+            //   ),
+            //   activeIcon: SvgPicture.asset(
+            //     'assets/icons/app/statusup-bold.svg',
+            //     color: kPrimaryColor,
+            //     height: height * 3.3,
+            //   ),
+            //   label: 'Progreso',
+            //   backgroundColor: kSecondaryColor,
+            // ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
                 'assets/icons/app/video-linear.svg',

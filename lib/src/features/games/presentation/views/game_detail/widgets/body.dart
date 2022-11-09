@@ -1,5 +1,5 @@
 import 'package:brainconcent_flutter/src/core/utils/size_config.dart';
-import 'package:brainconcent_flutter/src/features/games/domain/entities/game.dart';
+import 'package:brainconcent_flutter/src/features/games/domain/entities/game/game.dart';
 import 'package:brainconcent_flutter/src/features/games/presentation/views/game_detail/widgets/game_detail_appbar.dart';
 import 'package:brainconcent_flutter/src/features/games/presentation/views/game_detail/widgets/game_detail_description.dart';
 import 'package:brainconcent_flutter/src/features/games/presentation/views/game_detail/widgets/game_detail_start.dart';
@@ -32,7 +32,7 @@ class Body extends StatelessWidget {
               GameDetailDescription(height: height, game: game, width: width),
               GameDetailSkills(width: width, game: game, height: height),
               SizedBox(height: height * 4.5),
-              GameDetailStart(width: width),
+              GameDetailStart(width: width, game: game),
             ]),
           ),
         ),

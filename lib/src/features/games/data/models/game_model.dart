@@ -1,4 +1,4 @@
-import 'package:brainconcent_flutter/src/features/games/domain/entities/game.dart';
+import 'package:brainconcent_flutter/src/features/games/domain/entities/game/game.dart';
 
 class GameModel extends Game {
   const GameModel({

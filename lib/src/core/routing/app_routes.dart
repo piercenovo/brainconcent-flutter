@@ -4,6 +4,8 @@ import 'package:brainconcent_flutter/src/features/authentication/presentation/vi
 import 'package:brainconcent_flutter/src/features/authentication/presentation/views/onboarding/onboarding_screen.dart';
 import 'package:brainconcent_flutter/src/core/views/root/root_screen.dart';
 import 'package:brainconcent_flutter/src/features/authentication/presentation/views/register/register_screen.dart';
+import 'package:brainconcent_flutter/src/features/games/presentation/views/games/games_screen.dart';
+import 'package:brainconcent_flutter/src/features/games/presentation/views/puzzle/puzzle_screen.dart';
 import 'package:flutter/widgets.dart' show Widget, BuildContext;
 
 Map<String, Widget Function(BuildContext)> get appRoutes => {
@@ -17,4 +19,8 @@ Map<String, Widget Function(BuildContext)> get appRoutes => {
 
       // Root
       Routes.root: (_) => const RootScreen(),
+
+      // Games
+      Routes.games: (_) => const GamesScreen(),
+      Routes.puzzleGame: (_) => const PuzzleGameScreen(),
     };

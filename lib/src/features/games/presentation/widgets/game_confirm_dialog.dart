@@ -26,7 +26,7 @@ Future<bool> showGameConfirmDialog(BuildContext context) async {
                     child: Transform.scale(
                       scale: 1.3,
                       child: Image.asset(
-                        'assets/img/puzzle/brainy.png',
+                        'assets/images/puzzle/brainy.png',
                         width: 110,
                       ),
                     ),

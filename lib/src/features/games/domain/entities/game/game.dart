@@ -1,12 +1,5 @@
 import 'package:equatable/equatable.dart';
 
-enum GameState {
-  initial,
-  loading,
-  loaded,
-  error,
-}
-
 class Game extends Equatable {
   final String name;
   final String category;

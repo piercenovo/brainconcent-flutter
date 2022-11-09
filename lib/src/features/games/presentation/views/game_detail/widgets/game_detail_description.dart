@@ -1,5 +1,5 @@
 import 'package:brainconcent_flutter/src/core/utils/colors.dart';
-import 'package:brainconcent_flutter/src/features/games/domain/entities/game.dart';
+import 'package:brainconcent_flutter/src/features/games/domain/entities/game/game.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

@@ -1,7 +1,7 @@
 import 'package:brainconcent_flutter/src/features/games/domain/usecases/get_all_games.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:brainconcent_flutter/src/features/games/domain/entities/game.dart';
+import 'package:brainconcent_flutter/src/features/games/domain/entities/game/game.dart';
 import 'package:equatable/equatable.dart';
 
 import '../../../../../core/error/failures.dart';

@@ -1,4 +1,5 @@
 import 'package:brainconcent_flutter/src/core/helpers/animation_route.dart';
+import 'package:brainconcent_flutter/src/core/helpers/modal_loading_short.dart';
 import 'package:brainconcent_flutter/src/core/utils/size_config.dart';
 import 'package:brainconcent_flutter/src/features/authentication/presentation/cubit/auth/auth_cubit.dart';
 import 'package:brainconcent_flutter/src/features/authentication/presentation/cubit/user/user_cubit.dart';
@@ -52,8 +53,10 @@ class Body extends StatelessWidget {
                 press: () {
                   authBloc.onLogOut();
                   userBloc.logOutAuth();
+                  modalLoadingShort(context);
+
                   Navigator.pushAndRemoveUntil(context,
-                      routeSlide(page: const OnBoardingScreen()), (_) => false);
+                      routeFade(page: const OnBoardingScreen()), (_) => false);
                 },
               ),
             ],

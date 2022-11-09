@@ -10,4 +10,8 @@ class Routes {
 
   // Root
   static const root = 'root';
+
+  // Games
+  static const games = 'games';
+  static const puzzleGame = 'puzzle';
 }
