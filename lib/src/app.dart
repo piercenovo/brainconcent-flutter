@@ -2,7 +2,6 @@ import 'package:brainconcent_flutter/src/core/routing/app_routes.dart';
 import 'package:brainconcent_flutter/src/core/routing/routes.dart';
 import 'package:brainconcent_flutter/src/core/utils/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:brainconcent_flutter/src/injection_container.dart';
 import 'features/authentication/presentation/cubit/auth/auth_cubit.dart';
@@ -16,10 +15,10 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-        const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-    SystemChrome.setPreferredOrientations(
-        [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+    // SystemChrome.setSystemUIOverlayStyle(
+    //     const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    // SystemChrome.setPreferredOrientations(
+    //     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
     return MultiBlocProvider(
       providers: [

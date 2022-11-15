@@ -1,28 +1,22 @@
-import 'package:brainconcent_flutter/src/features/characters/presentation/widgets/character_card.dart';
-import 'package:brainconcent_flutter/src/features/characters/domain/entities/character.dart';
+import 'package:brainconcent_flutter/src/core/utils/shimmer_widget.dart';
 import 'package:flutter/material.dart';
 
-class HomeCharacterList extends StatelessWidget {
-  const HomeCharacterList({
+class HomeCharacterLoading extends StatelessWidget {
+  const HomeCharacterLoading({
     Key? key,
     required this.height,
-    required this.characters,
     required this.width,
   }) : super(key: key);
 
   final double height;
-  final List<Character> characters;
   final double width;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
+        SizedBox(
           height: height * 14,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-          ),
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Padding(
@@ -30,16 +24,17 @@ class HomeCharacterList extends StatelessWidget {
               child: Row(
                 children: [
                   ...List.generate(
-                    characters.length,
+                    4,
                     (index) => Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: width * 1,
                       ),
-                      child: CharacterCard(
-                        characters: characters,
-                        index: index,
-                        height: height,
-                      ),
+                      child: ShimmerWidget.circular(
+                          width: width * 26.8,
+                          height: width * 26.8,
+                          shapeBorder: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(100),
+                          )),
                     ),
                   ),
                 ],

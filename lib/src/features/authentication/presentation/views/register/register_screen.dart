@@ -82,6 +82,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       },
       child: Scaffold(
         appBar: AppBar(
+          toolbarHeight: 40,
           leading: IconButton(
             icon: SvgPicture.asset('assets/icons/app/arrow-left-2.svg',
                 height: height * 2.8),

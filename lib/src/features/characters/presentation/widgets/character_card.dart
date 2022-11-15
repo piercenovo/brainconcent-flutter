@@ -9,13 +9,11 @@ class CharacterCard extends StatelessWidget {
     required this.height,
     required this.index,
     required this.characters,
-    required this.cardSize,
   }) : super(key: key);
 
   final double height;
   final int index;
   final List<Character> characters;
-  final double cardSize;
 
   @override
   Widget build(BuildContext context) {

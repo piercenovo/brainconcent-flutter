@@ -41,8 +41,12 @@ class Body extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: width * 8),
         child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(
+            parent: AlwaysScrollableScrollPhysics(),
+          ),
           child: Column(
             children: [
+              SizedBox(height: height * 2),
               const AuthImage(
                   image: 'assets/images/authentication/register.png'),
               SizedBox(height: height * 2.5),
@@ -65,7 +69,7 @@ class Body extends StatelessWidget {
                   page: LoginScreen(),
                   title: '¿Ya eres miembro de Brainconcent?',
                   subtitle: 'Inicia sesión'),
-              SizedBox(height: height * 5),
+              SizedBox(height: height * 3),
             ],
           ),
         ),

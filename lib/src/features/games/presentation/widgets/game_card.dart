@@ -29,6 +29,7 @@ class GameCard extends StatelessWidget {
       },
       child: SizedBox(
         width: cardSize,
+        height: height * 16.6,
         child: Column(children: [
           SizedBox(height: height * 0.5),
           AspectRatio(
@@ -37,8 +38,9 @@ class GameCard extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
-                        image: AssetImage(games[index].image),
-                        fit: BoxFit.cover)),
+                      image: AssetImage(games[index].image),
+                      fit: BoxFit.cover,
+                    )),
               )),
           SizedBox(height: height * 1.1),
         ]),

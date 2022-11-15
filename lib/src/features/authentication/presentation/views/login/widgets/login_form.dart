@@ -37,7 +37,7 @@ class LoginForm extends StatelessWidget {
         SizedBox(height: getProportionateScreenHeight(20)),
         TextCustomField(
             controller: usernameController,
-            hint: 'Nombre de usuario',
+            hint: 'Usuario',
             icon: 'assets/icons/app/user.svg',
             fillColor: kLightColor,
             inputType: TextInputType.name,

@@ -66,6 +66,10 @@ class _LoginScreenState extends State<LoginScreen> {
         }
       },
       child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          toolbarHeight: 40,
+        ),
         body: Body(
           keyForm: _keyForm,
           usernameController: usernameController,

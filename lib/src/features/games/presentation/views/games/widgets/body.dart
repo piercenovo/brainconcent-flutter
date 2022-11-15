@@ -2,7 +2,7 @@ import 'package:brainconcent_flutter/src/features/games/presentation/cubit/games
 import 'package:brainconcent_flutter/src/features/games/presentation/views/games/widgets/game_list.dart';
 import 'package:brainconcent_flutter/src/features/games/presentation/views/games/widgets/games_appbar.dart';
 import 'package:brainconcent_flutter/src/features/games/presentation/widgets/error_message.dart';
-import 'package:brainconcent_flutter/src/features/games/presentation/widgets/loading_widget.dart';
+import 'package:brainconcent_flutter/src/core/helpers/loading_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

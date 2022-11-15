@@ -1,3 +1,5 @@
+import 'package:brainconcent_flutter/src/core/error/failures.dart';
+import 'package:brainconcent_flutter/src/core/strings/failures.dart';
 import 'package:brainconcent_flutter/src/features/authentication/data/datasources/local/secure_storage.dart';
 import 'package:brainconcent_flutter/src/features/authentication/data/services/auth_services_impl.dart';
 import 'package:equatable/equatable.dart';
@@ -56,5 +58,18 @@ class AuthCubit extends Cubit<AuthState> {
   Future<void> onLogOut() async {
     await secureStorage.deleteSecureStorage();
     emit(LogOutState());
+  }
+
+  String mapFailureToMessage(Failure failure) {
+    switch (failure.runtimeType) {
+      case ServerFailure:
+        return SERVER_FAILURE_MESSAGE;
+      case EmptyCacheFailure:
+        return EMPTY_CACHE_FAILURE_MESSAGE;
+      case OfflineFailure:
+        return OFFLINE_FAILURE_MESSAGE;
+      default:
+        return "Error inesperado, inténtalo de nuevo más tarde.";
+    }
   }
 }

@@ -51,7 +51,7 @@ class RegisterForm extends StatelessWidget {
         SizedBox(height: getProportionateScreenHeight(15)),
         TextCustomField(
             controller: usernameController,
-            hint: 'Nombre de usuario',
+            hint: 'Usuario',
             icon: 'assets/icons/app/user.svg',
             fillColor: kLightColor,
             inputType: TextInputType.name,

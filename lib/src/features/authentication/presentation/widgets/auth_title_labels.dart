@@ -19,7 +19,7 @@ class AuthTitleLabels extends StatelessWidget {
     return Column(
       children: [
         Text(title, style: kTitle1),
-        SizedBox(height: height * 1.5),
+        SizedBox(height: height * 1),
         Text(
           subtitle,
           style: kBodyText4,

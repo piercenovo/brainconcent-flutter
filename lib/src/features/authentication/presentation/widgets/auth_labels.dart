@@ -1,3 +1,4 @@
+import 'package:brainconcent_flutter/src/core/helpers/animation_route.dart';
 import 'package:brainconcent_flutter/src/core/utils/constants.dart';
 import 'package:brainconcent_flutter/src/core/utils/size_config.dart';
 import 'package:flutter/material.dart';
@@ -26,8 +27,7 @@ class AuthLabels extends StatelessWidget {
         GestureDetector(
           child: Text(subtitle, style: kBodyText7),
           onTap: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => page));
+            Navigator.push(context, routeGo(page: page));
           },
         )
       ],

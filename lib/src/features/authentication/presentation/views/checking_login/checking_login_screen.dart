@@ -74,10 +74,11 @@ class _CheckingLoginScreenState extends State<CheckingLoginScreen>
               child: Column(
                 children: [
                   AnimatedBuilder(
-                      animation: _animationController,
-                      builder: (_, child) => Transform.scale(
-                          scale: _scaleAnimation.value,
-                          child: Image.asset('assets/images/app/brainy.png'))),
+                    animation: _animationController,
+                    builder: (_, child) => Transform.scale(
+                        scale: _scaleAnimation.value,
+                        child: Image.asset('assets/images/app/brainy.png')),
+                  ),
                 ],
               ),
             ),

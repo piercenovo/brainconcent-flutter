@@ -42,14 +42,15 @@ class GameList extends StatelessWidget {
         child: Column(children: [
           SizedBox(height: height * 1.5),
           AspectRatio(
-              aspectRatio: 1.85,
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    image: DecorationImage(
-                        image: AssetImage(games[index].image),
-                        fit: BoxFit.cover)),
-              )),
+            aspectRatio: 1.85,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                image: DecorationImage(
+                    image: AssetImage(games[index].image), fit: BoxFit.cover),
+              ),
+            ),
+          ),
           SizedBox(height: height * 1),
         ]),
       ),

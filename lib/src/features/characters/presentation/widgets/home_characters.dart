@@ -1,7 +1,7 @@
 import 'package:brainconcent_flutter/src/features/characters/presentation/widgets/home_character_list.dart';
 import 'package:brainconcent_flutter/src/features/characters/presentation/cubit/characters/characters_cubit.dart';
+import 'package:brainconcent_flutter/src/features/characters/presentation/widgets/home_character_loading.dart';
 import 'package:brainconcent_flutter/src/features/games/presentation/widgets/error_message.dart';
-import 'package:brainconcent_flutter/src/features/games/presentation/widgets/loading_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,9 +20,9 @@ class HomeCharacters extends StatelessWidget {
     return BlocBuilder<CharactersCubit, CharactersState>(
       builder: (context, state) {
         if (state is CharactersInitial) {
-          return const LoadingWidget();
+          return HomeCharacterLoading(height: height, width: width);
         } else if (state is CharactersLoading) {
-          return const LoadingWidget();
+          return HomeCharacterLoading(height: height, width: width);
         } else if (state is CharactersSuccess) {
           final characters = state.characters;
           return HomeCharacterList(
@@ -35,7 +35,7 @@ class HomeCharacters extends StatelessWidget {
             message: state.message,
           );
         }
-        return const LoadingWidget();
+        return HomeCharacterLoading(height: height, width: width);
       },
     );
   }

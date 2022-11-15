@@ -1,7 +1,7 @@
 import 'package:brainconcent_flutter/src/features/games/presentation/widgets/error_message.dart';
-import 'package:brainconcent_flutter/src/features/games/presentation/widgets/loading_widget.dart';
 import 'package:brainconcent_flutter/src/features/stories/presentation/cubit/stories/stories_cubit.dart';
 import 'package:brainconcent_flutter/src/features/stories/presentation/widgets/home_story_list.dart';
+import 'package:brainconcent_flutter/src/features/stories/presentation/widgets/home_story_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,9 +20,9 @@ class HomeStory extends StatelessWidget {
     return BlocBuilder<StoriesCubit, StoriesState>(
       builder: (context, state) {
         if (state is StoriesInitial) {
-          return const LoadingWidget();
+          return HomeStoryLoading(height: height, width: width);
         } else if (state is StoriesLoading) {
-          return const LoadingWidget();
+          return HomeStoryLoading(height: height, width: width);
         } else if (state is StoriesSuccess) {
           final stories = state.stories;
           return HomeStoryList(
@@ -35,7 +35,7 @@ class HomeStory extends StatelessWidget {
             message: state.message,
           );
         }
-        return const LoadingWidget();
+        return HomeStoryLoading(height: height, width: width);
       },
     );
   }

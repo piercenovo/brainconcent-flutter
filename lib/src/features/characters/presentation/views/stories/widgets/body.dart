@@ -1,5 +1,5 @@
 import 'package:brainconcent_flutter/src/features/games/presentation/widgets/error_message.dart';
-import 'package:brainconcent_flutter/src/features/games/presentation/widgets/loading_widget.dart';
+import 'package:brainconcent_flutter/src/core/helpers/loading_widget.dart';
 import 'package:brainconcent_flutter/src/features/stories/presentation/cubit/stories/stories_cubit.dart';
 import 'package:brainconcent_flutter/src/features/stories/presentation/views/stories/widgets/story_appbar.dart';
 import 'package:brainconcent_flutter/src/features/stories/presentation/views/stories/widgets/story_list.dart';

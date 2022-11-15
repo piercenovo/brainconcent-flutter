@@ -15,7 +15,7 @@ class AuthImage extends StatelessWidget {
       color: Colors.transparent,
       child: Image.asset(
         image,
-        height: getProportionateScreenHeight(220),
+        height: getProportionateScreenHeight(175),
       ),
     );
   }
