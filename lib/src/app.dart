@@ -18,6 +18,9 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
         const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    SystemChrome.setPreferredOrientations(
+        [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => sl<AuthCubit>()..onCheckingLogin()),

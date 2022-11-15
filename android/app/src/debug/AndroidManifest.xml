@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.brainconcent_flutter">
+    package="com.brainconcent.app">
       
     <!-- Permissions Internet -->
     <uses-permission android:name="android.permission.INTERNET"/>
