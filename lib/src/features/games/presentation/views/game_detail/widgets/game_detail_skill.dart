@@ -30,13 +30,13 @@ class GameDetailSkill extends StatelessWidget {
               SizedBox(width: width * 22),
               SvgPicture.asset(
                 skillsImages,
-                height: height * 3.3,
+                height: height * 3.2,
                 color: kAccentColorTwo,
               ),
               SizedBox(width: width * 3),
               Text(skillTiles,
                   style: TextStyle(
-                      fontSize: width * 3.3,
+                      fontSize: width * 3.4,
                       fontWeight: FontWeight.w500,
                       color: kTextColor.withOpacity(0.9))),
             ],

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:brainconcent_flutter/src/core/utils/colors.dart';
 import 'package:brainconcent_flutter/src/features/stories/presentation/views/story_detail/widgets/chapter_video_player.dart';
 import 'package:flutter/material.dart';
@@ -7,17 +9,17 @@ class StoryDetailChapter extends StatelessWidget {
   const StoryDetailChapter({
     Key? key,
     required this.width,
+    required this.height,
     required this.chapterTitles,
     required this.chapterDuration,
     required this.chapterVideos,
-    required this.height,
   }) : super(key: key);
 
   final double width;
+  final double height;
   final String chapterTitles;
   final String chapterDuration;
   final String chapterVideos;
-  final double height;
 
   @override
   Widget build(BuildContext context) {
@@ -32,9 +34,9 @@ class StoryDetailChapter extends StatelessWidget {
         );
       },
       child: Container(
-          height: height * 13,
+          height: 100,
           decoration: BoxDecoration(
-            color: lightColor2,
+            color: lightColor,
             borderRadius: BorderRadius.circular(20),
           ),
           child: Padding(
@@ -92,9 +94,12 @@ class StoryDetailChapter extends StatelessWidget {
                     ],
                   ),
                 )),
-                SvgPicture.asset(
-                  'assets/icons/app/arrow-right.svg',
-                  color: kSecondaryColorTwo,
+                Transform.rotate(
+                  angle: pi,
+                  child: SvgPicture.asset(
+                    'assets/icons/app/bx-chevron-left.svg',
+                    color: kSecondaryColorTwo,
+                  ),
                 ),
               ],
             ),

@@ -74,7 +74,7 @@ class WinnerDialog extends StatelessWidget {
                               ),
                               SizedBox(height: 4),
                               Text(
-                                "Has completado el rompecabezas",
+                                "Has completado la partida",
                                 style: TextStyle(
                                   fontSize: 17,
                                 ),
@@ -148,6 +148,7 @@ class WinnerDialog extends StatelessWidget {
                               );
                               // ignore: use_build_context_synchronously
                               Navigator.of(context)
+                                ..pop()
                                 ..pop()
                                 ..pop();
                             },

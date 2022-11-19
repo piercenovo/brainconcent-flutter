@@ -45,7 +45,7 @@ final kBodyText4 = TextStyle(
 );
 
 final kBodyText5 = TextStyle(
-  fontSize: getProportionateScreenWidth(12.4),
+  fontSize: getProportionateScreenWidth(13),
   fontWeight: FontWeight.w600,
   color: kSecondaryColorTwo,
 );
@@ -61,6 +61,12 @@ final kBodyText7 = TextStyle(
   fontWeight: FontWeight.bold,
   color: kSecondaryColorTwo,
   decorationColor: kSecondaryColorTwo,
+);
+
+final kBodyText8 = TextStyle(
+  fontSize: getProportionateScreenWidth(17),
+  fontWeight: FontWeight.bold,
+  color: lightColor,
 );
 
 final kSettings = TextStyle(

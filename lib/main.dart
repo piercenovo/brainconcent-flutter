@@ -18,10 +18,10 @@ class PostHttpOverrides extends HttpOverrides {
 void main() async {
   HttpOverrides.global = PostHttpOverrides();
   WidgetsFlutterBinding.ensureInitialized();
-  await di.init();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
-  ]).then((value) => runApp(const App()));
+  ]);
+  await di.init();
   runApp(const App());
 }

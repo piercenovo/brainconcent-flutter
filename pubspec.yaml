@@ -1,12 +1,12 @@
 name: brainconcent_flutter
 description: A new Flutter project.
 
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.18.1 <3.0.0'
+  sdk: ">=2.18.1 <3.0.0"
 
 dependencies:
   flutter:
@@ -36,7 +36,9 @@ dependencies:
   audio_session: ^0.1.0
   rive: ^0.9.1
   shimmer: ^2.0.0
-  
+  flip_card: ^0.6.0
+  percent_indicator: ^4.2.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -44,23 +46,19 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
-
   uses-material-design: true
 
   assets:
     - assets/json/
-    - assets/svg/app/
     - assets/icons/app/
     - assets/icons/puzzle/
     - assets/images/app/
     - assets/images/onboarding/
     - assets/images/authentication/
     - assets/images/avatar/
-    - assets/images/games/    
+    - assets/images/games/
     - assets/images/stories/
-    - assets/images/puzzle/
     - assets/images/animals/
-    - assets/svg/authentication/
     - assets/rive/winner.riv
     - assets/sounds/animals/
 

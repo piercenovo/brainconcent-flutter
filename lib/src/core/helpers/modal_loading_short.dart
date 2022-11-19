@@ -10,6 +10,6 @@ void modalLoadingShort(BuildContext context) {
       context: context,
       builder: (context) => Padding(
             padding: EdgeInsets.symmetric(horizontal: width * 38),
-            child: Lottie.asset('assets/json/loading-2.json'),
+            child: Lottie.asset('assets/json/loading.json'),
           ));
 }

@@ -70,7 +70,7 @@ class _CheckingLoginScreenState extends State<CheckingLoginScreen>
           child: Center(
             child: SizedBox(
               width: width * 50,
-              height: width * 50,
+              height: width * 30,
               child: Column(
                 children: [
                   AnimatedBuilder(

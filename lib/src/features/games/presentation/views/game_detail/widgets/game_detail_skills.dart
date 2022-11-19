@@ -28,7 +28,7 @@ class GameDetailSkills extends StatelessWidget {
             padding: EdgeInsets.all(width * 3),
             child: Text('Habilidades Entrenadas',
                 style: TextStyle(
-                    fontSize: width * 3.8,
+                    fontSize: width * 3.9,
                     fontWeight: FontWeight.w600,
                     color: acentColor)),
           ),

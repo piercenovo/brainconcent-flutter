@@ -53,7 +53,7 @@ class StoryDetailDescription extends StatelessWidget {
           'Descripción',
           style: TextStyle(
               color: acentColor,
-              fontSize: width * 4.2,
+              fontSize: width * 4.5,
               fontWeight: FontWeight.w600),
         ),
         SizedBox(height: height * 1.5),
@@ -62,7 +62,7 @@ class StoryDetailDescription extends StatelessWidget {
           textAlign: TextAlign.justify,
           style: TextStyle(
             color: kGrayColorTwo,
-            fontSize: width * 3.4,
+            fontSize: width * 3.7,
           ),
         ),
         SizedBox(height: height * 2),
@@ -70,7 +70,7 @@ class StoryDetailDescription extends StatelessWidget {
           'Capítulos',
           style: TextStyle(
               color: acentColor,
-              fontSize: width * 4.2,
+              fontSize: width * 4.5,
               fontWeight: FontWeight.w600),
         ),
       ],
@@ -83,13 +83,13 @@ class StoryDetailDescription extends StatelessWidget {
         SvgPicture.asset(
           icon,
           color: color,
-          width: width * 4,
+          width: width * 4.2,
         ),
         SizedBox(width: width * 0.8),
         Text(
           text,
           style: TextStyle(
-            fontSize: width * 3.3,
+            fontSize: width * 3.5,
             fontWeight: FontWeight.w500,
           ),
         )

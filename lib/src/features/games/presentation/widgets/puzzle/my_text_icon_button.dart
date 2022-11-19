@@ -1,5 +1,6 @@
 import 'package:brainconcent_flutter/src/core/utils/colors.dart';
 import 'package:brainconcent_flutter/src/core/utils/responsive.dart';
+import 'package:brainconcent_flutter/src/core/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class MyTextIconButton extends StatelessWidget {
@@ -17,12 +18,12 @@ class MyTextIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final padding = Responsive.of(context).dp(1.3);
+    final padding = Responsive.of(context).dp(1.7);
     return TextButton.icon(
       onPressed: onPressed,
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(
-          lightColor.withOpacity(0.8),
+          kEasy,
         ),
         fixedSize: MaterialStateProperty.all(
           Size.fromHeight(height),
@@ -34,19 +35,23 @@ class MyTextIconButton extends StatelessWidget {
         ),
         elevation: MaterialStateProperty.all(0),
         shadowColor: MaterialStateProperty.all(
-          Colors.black38,
+          Colors.black45,
         ),
         shape: MaterialStateProperty.all(
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30),
+            borderRadius: BorderRadius.circular(50),
           ),
         ),
       ),
       icon: icon,
-      label: Text(
-        label,
-        style:
-            TextStyle(fontWeight: FontWeight.w600, color: kSecondaryColorTwo),
+      label: SizedBox(
+        child: Text(
+          label,
+          style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: SizeConfig.blockSizeH! * 4.5,
+              color: kLightColor),
+        ),
       ),
     );
   }

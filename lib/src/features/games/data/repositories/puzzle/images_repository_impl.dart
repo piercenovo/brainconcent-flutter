@@ -8,7 +8,7 @@ import 'package:image/image.dart';
 const puzzleOptions = <PuzzleImage>[
   PuzzleImage(
     name: 'Numeric',
-    assetPath: 'assets/images/puzzle/numeric-puzzle.png',
+    assetPath: 'assets/images/games/numeric-puzzle.png',
     soundPath: '',
   ),
   PuzzleImage(
@@ -51,16 +51,16 @@ const puzzleOptions = <PuzzleImage>[
     assetPath: 'assets/images/animals/panda.png',
     soundPath: 'assets/sounds/animals/panda.mp3',
   ),
-  PuzzleImage(
-    name: 'Penguin',
-    assetPath: 'assets/images/animals/penguin.png',
-    soundPath: 'assets/sounds/animals/penguin.mp3',
-  ),
-  PuzzleImage(
-    name: 'Tiger',
-    assetPath: 'assets/images/animals/tiger.png',
-    soundPath: 'assets/sounds/animals/tiger.mp3',
-  ),
+  // PuzzleImage(
+  //   name: 'Penguin',
+  //   assetPath: 'assets/images/animals/penguin.png',
+  //   soundPath: 'assets/sounds/animals/penguin.mp3',
+  // ),
+  // PuzzleImage(
+  //   name: 'Tiger',
+  //   assetPath: 'assets/images/animals/tiger.png',
+  //   soundPath: 'assets/sounds/animals/tiger.mp3',
+  // ),
 ];
 
 Future<Image> decodeAsset(ByteData bytes) async {

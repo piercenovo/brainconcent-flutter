@@ -26,7 +26,7 @@ Future<bool> showGameConfirmDialog(BuildContext context) async {
                     child: Transform.scale(
                       scale: 1.3,
                       child: Image.asset(
-                        'assets/images/puzzle/brainy.png',
+                        'assets/images/app/brainy.png',
                         width: 110,
                       ),
                     ),
@@ -44,7 +44,7 @@ Future<bool> showGameConfirmDialog(BuildContext context) async {
                       horizontal: 20,
                     ),
                     child: Text(
-                      'Realmente quieres salir del juego actual',
+                      'Realmente quieres salir de la partida',
                       style: TextStyle(
                         fontSize: width * 3.6,
                       ),

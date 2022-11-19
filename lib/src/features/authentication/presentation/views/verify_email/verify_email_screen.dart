@@ -43,8 +43,8 @@ class VerifyEmailScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            icon: SvgPicture.asset('assets/icons/app/arrow-left-2.svg',
-                height: height * 2.8),
+            icon: SvgPicture.asset('assets/icons/app/bx-chevron-left.svg',
+                height: height * 3.8),
             onPressed: () => Navigator.pop(context),
           ),
         ),
@@ -56,12 +56,9 @@ class VerifyEmailScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
+                  SizedBox(
                     width: width * 100,
-                    height: height * 32,
-                    decoration: BoxDecoration(
-                        color: Colors.blue.withOpacity(.1),
-                        borderRadius: BorderRadius.circular(8.0)),
+                    height: height * 28,
                     child: Lottie.asset(
                       'assets/json/verification-code.json',
                     ),
@@ -69,26 +66,31 @@ class VerifyEmailScreen extends StatelessWidget {
                   SizedBox(height: height * 4),
                   TextCustom(
                       text: 'Verifica tu correo electrónico',
-                      fontSize: width * 4.5,
+                      fontSize: width * 4.8,
                       color: kSecondaryColor,
                       fontWeight: FontWeight.w500),
                   SizedBox(height: height * 2),
                   TextCustom(
                     text:
-                        'Por favor ingresa el código de 5 dígitos enviado a tu correo electrónico: $email',
+                        'Por favor ingresa el código de 5 dígitos enviado al correo electrónico: $email',
                     maxLines: 3,
-                    fontSize: width * 3.6,
-                    color: kTextColor.withOpacity(0.7),
+                    fontSize: width * 3.8,
+                    color: kTextColor.withOpacity(0.9),
                   ),
                   SizedBox(height: height * 4),
                   PinCodeTextField(
+                      cursorColor: kBackgroundColor,
+                      textStyle: const TextStyle(color: kTextColor),
                       appContext: context,
                       length: 5,
                       keyboardType: TextInputType.number,
                       pinTheme: PinTheme(
+                        shape: PinCodeFieldShape.box,
+                        borderRadius: BorderRadius.circular(5653),
+                        fieldHeight: 50,
+                        inactiveColor: kSecondaryColorTwo,
                         activeColor: kSecondaryColor,
                         selectedColor: kPrimaryColor,
-                        inactiveColor: kSecondaryColorTwo,
                       ),
                       onChanged: (value) {},
                       onCompleted: (value) =>

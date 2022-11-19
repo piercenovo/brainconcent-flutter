@@ -38,7 +38,7 @@ Future<bool> modalSuccess(BuildContext context, String text,
                     ),
                   ),
                   Lottie.asset(
-                    'assets/json/done-2.json',
+                    'assets/json/done.json',
                     height: height * 20,
                     width: width * 50,
                   ),

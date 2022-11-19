@@ -22,8 +22,8 @@ class StoryDetailChapters extends StatelessWidget {
           return Column(
             children: [
               StoryDetailChapter(
-                height: height,
                 width: width,
+                height: height,
                 chapterTitles: story.chapterTitles[index],
                 chapterDuration: story.chapterDuration[index],
                 chapterVideos: story.chapterVideos[index],

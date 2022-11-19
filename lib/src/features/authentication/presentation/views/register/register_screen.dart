@@ -2,6 +2,7 @@ import 'package:brainconcent_flutter/src/core/helpers/animation_route.dart';
 import 'package:brainconcent_flutter/src/core/helpers/error_message.dart';
 import 'package:brainconcent_flutter/src/core/helpers/modal_loading_short.dart';
 import 'package:brainconcent_flutter/src/core/helpers/modal_success.dart';
+import 'package:brainconcent_flutter/src/core/utils/colors.dart';
 import 'package:brainconcent_flutter/src/core/utils/size_config.dart';
 import 'package:brainconcent_flutter/src/features/authentication/presentation/cubit/user/user_cubit.dart';
 import 'package:brainconcent_flutter/src/features/authentication/presentation/views/register/widgets/body.dart';
@@ -82,10 +83,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
       },
       child: Scaffold(
         appBar: AppBar(
-          toolbarHeight: 40,
+          toolbarHeight: 45,
           leading: IconButton(
-            icon: SvgPicture.asset('assets/icons/app/arrow-left-2.svg',
-                height: height * 2.8),
+            icon: SvgPicture.asset(
+              'assets/icons/app/bx-chevron-left.svg',
+              height: height * 4,
+              color: kSecondaryColor,
+            ),
             onPressed: () => Navigator.pop(context),
           ),
         ),

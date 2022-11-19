@@ -18,5 +18,10 @@ Color kGreyColor = const Color(0xffF9F9F9);
 Color kGrayColor = const Color(0xffD2D2D2);
 Color kGrayColorTwo = const Color(0xff808080);
 
+Color kEasy = const Color(0xff46A9AB);
+Color kMedium = const Color(0xff1B77B6);
+Color kHard = const Color(0xffEA7C71);
+Color kStar = const Color(0xffF2EB02);
+
 const kTextColor = Color(0xFF757575);
 const kTextLogout = Color(0xFFE33F3F);
