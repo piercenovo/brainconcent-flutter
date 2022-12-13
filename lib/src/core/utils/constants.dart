@@ -35,12 +35,12 @@ final kBodyText2 = TextStyle(
 
 final kBodyText3 = TextStyle(
     color: kSecondaryColor,
-    fontSize: SizeConfig.blockSizeH! * 4.1,
+    fontSize: SizeConfig.blockSizeH! * 4,
     fontWeight: FontWeight.normal);
 
 final kBodyText4 = TextStyle(
   color: kPrimaryColor,
-  fontSize: SizeConfig.blockSizeH! * 4.1,
+  fontSize: SizeConfig.blockSizeH! * 4,
   fontWeight: FontWeight.normal,
 );
 

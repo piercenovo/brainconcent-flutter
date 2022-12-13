@@ -1,4 +1,8 @@
+import 'package:brainconcent_flutter/src/core/helpers/animation_route.dart';
+import 'package:brainconcent_flutter/src/core/utils/colors.dart';
 import 'package:brainconcent_flutter/src/core/utils/size_config.dart';
+import 'package:brainconcent_flutter/src/core/views/secondary_root/secondary_root_screen.dart';
+import 'package:brainconcent_flutter/src/core/widgets/primary_button.dart';
 import 'package:brainconcent_flutter/src/features/authentication/presentation/cubit/auth/auth_cubit.dart';
 import 'package:brainconcent_flutter/src/features/authentication/presentation/views/login/widgets/login_form.dart';
 import 'package:brainconcent_flutter/src/features/authentication/presentation/views/register/register_screen.dart';
@@ -46,8 +50,8 @@ class Body extends StatelessWidget {
               const AuthImage(image: 'assets/images/authentication/login.png'),
               SizedBox(height: height * 2.5),
               const AuthTitleLabels(
-                  title: 'Inicia Sesión',
-                  subtitle: 'Bienvenido de nuevo,\n te hemos extrañado mucho.'),
+                  title: 'Bienvenido',
+                  subtitle: 'Hola de nuevo,\n te hemos extrañado mucho.'),
               SizedBox(height: height * 2),
               LoginForm(
                 keyForm: _keyForm,
@@ -60,7 +64,20 @@ class Body extends StatelessWidget {
               const AuthLabels(
                   page: RegisterScreen(),
                   title: '¿Eres nuevo en Brainconcent?',
-                  subtitle: 'Regístrate aquí'),
+                  subtitle: 'Registrarse aquí'),
+              SizedBox(height: height * 3),
+              PrimaryButton(
+                height: getProportionateScreenHeight(58),
+                width: getProportionateScreenWidth(310),
+                text: 'Explora como invitado',
+                textColor: kSecondaryColorTwo,
+                bgColor: kLightColor,
+                onPressed: () {
+                  Navigator.push(
+                      context, routeGo(page: const SecondaryRootScreen()));
+                },
+                fontSize: width * 4,
+              ),
               SizedBox(height: height * 3),
             ],
           ),

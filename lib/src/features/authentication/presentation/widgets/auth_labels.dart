@@ -23,7 +23,7 @@ class AuthLabels extends StatelessWidget {
     return Column(
       children: [
         Text(title, style: kBodyText6),
-        SizedBox(height: height * 1),
+        SizedBox(height: height * 0.7),
         GestureDetector(
           child: Text(subtitle, style: kBodyText7),
           onTap: () {

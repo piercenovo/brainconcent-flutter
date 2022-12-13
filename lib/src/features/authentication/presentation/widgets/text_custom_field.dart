@@ -55,7 +55,7 @@ class TextCustomField extends StatelessWidget {
         prefixIcon: Padding(
           padding: const EdgeInsets.only(right: 16),
           child: Container(
-            height: 54,
+            height: height * 6.1,
             decoration: BoxDecoration(
               border: Border(
                 right: BorderSide(

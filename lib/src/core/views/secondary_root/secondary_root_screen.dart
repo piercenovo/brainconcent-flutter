@@ -3,27 +3,26 @@ import 'package:brainconcent_flutter/src/core/utils/platform.dart';
 import 'package:brainconcent_flutter/src/core/utils/size_config.dart';
 import 'package:brainconcent_flutter/src/core/views/home/home_screen.dart';
 import 'package:brainconcent_flutter/src/features/games/presentation/views/games/games_screen.dart';
-import 'package:brainconcent_flutter/src/features/profile/presentation/views/profile/profile_screen.dart';
 import 'package:brainconcent_flutter/src/features/stories/presentation/views/stories/stories_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
 
-class RootScreen extends StatefulWidget {
-  const RootScreen({Key? key}) : super(key: key);
+class SecondaryRootScreen extends StatefulWidget {
+  const SecondaryRootScreen({Key? key}) : super(key: key);
 
   @override
-  RootScreenState createState() => RootScreenState();
+  SecondaryRootScreenState createState() => SecondaryRootScreenState();
 }
 
-class RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
+class SecondaryRootScreenState extends State<SecondaryRootScreen>
+    with TickerProviderStateMixin {
   int currentIndex = 0;
 
   final pages = [
     const HomeScreen(),
     const GamesScreen(),
     const StoriesScreen(),
-    const ProfileScreen(),
   ];
 
   @override
@@ -48,7 +47,7 @@ class RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
   Container _buildBottomNavigatorBarIos(double height, double width) =>
       Container(
         padding: EdgeInsets.only(
-            left: width * 1.5, right: width * 1.5, top: height * 0.8),
+            left: width * 5.5, right: width * 5.5, top: height * 0.8),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
             boxShadow: [BoxShadow(color: kSecondaryColor.withOpacity(0.98))]),
@@ -105,20 +104,6 @@ class RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
                 height: height * 3.3,
               ),
               label: 'Cuentos',
-              backgroundColor: kSecondaryColor,
-            ),
-            BottomNavigationBarItem(
-              icon: SvgPicture.asset(
-                'assets/icons/app/user.svg',
-                color: kGrayColor,
-                height: height * 3.3,
-              ),
-              activeIcon: SvgPicture.asset(
-                'assets/icons/app/user-bold.svg',
-                color: kPrimaryColor,
-                height: height * 3.3,
-              ),
-              label: 'Perfil',
               backgroundColor: kSecondaryColor,
             ),
           ],
@@ -186,20 +171,6 @@ class RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
                 height: height * 3.3,
               ),
               label: 'Cuentos',
-              backgroundColor: kSecondaryColor,
-            ),
-            BottomNavigationBarItem(
-              icon: SvgPicture.asset(
-                'assets/icons/app/user.svg',
-                color: kGrayColor,
-                height: height * 3.3,
-              ),
-              activeIcon: SvgPicture.asset(
-                'assets/icons/app/user-bold.svg',
-                color: kPrimaryColor,
-                height: height * 3.3,
-              ),
-              label: 'Perfil',
               backgroundColor: kSecondaryColor,
             ),
           ],

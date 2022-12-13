@@ -51,7 +51,7 @@ class Body extends StatelessWidget {
                   image: 'assets/images/authentication/register.png'),
               SizedBox(height: height * 2.5),
               const AuthTitleLabels(
-                title: 'Regístrate',
+                title: 'Registro',
                 subtitle: '¿Eres nuevo en Brainconcent?',
               ),
               SizedBox(height: height * 2),
@@ -68,7 +68,7 @@ class Body extends StatelessWidget {
               const AuthLabels(
                   page: LoginScreen(),
                   title: '¿Ya eres miembro de Brainconcent?',
-                  subtitle: 'Inicia sesión'),
+                  subtitle: 'Iniciar sesión'),
               SizedBox(height: height * 3),
             ],
           ),

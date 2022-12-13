@@ -2,6 +2,7 @@ import 'package:brainconcent_flutter/src/core/utils/colors.dart';
 import 'package:brainconcent_flutter/src/core/utils/size_config.dart';
 import 'package:brainconcent_flutter/src/features/games/presentation/views/memory/memory_levels/widgets/memory_details.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class MemoryLevelsScreen extends StatefulWidget {
   const MemoryLevelsScreen({Key? key}) : super(key: key);
@@ -54,10 +55,21 @@ class _MemoryLevelsScreenState extends State<MemoryLevelsScreen>
     double height = SizeConfig.blockSizeV!;
 
     return Scaffold(
+        appBar: AppBar(
+          backgroundColor: lightColor2,
+          leading: IconButton(
+            icon: SvgPicture.asset(
+              'assets/icons/app/bx-chevron-left.svg',
+              height: height * 4,
+              color: kSecondaryColor,
+            ),
+            onPressed: () => Navigator.pop(context),
+          ),
+        ),
         backgroundColor: lightColor2,
         body: Padding(
           padding: EdgeInsets.symmetric(
-              horizontal: width * 10, vertical: height * 16),
+              horizontal: width * 10, vertical: height * 5),
           child: Column(children: [
             AnimatedBuilder(
               animation: _animationController,

@@ -23,5 +23,6 @@ AppBarTheme appBarTheme() {
   return AppBarTheme(
     backgroundColor: kBackgroundColor,
     elevation: 0,
+    foregroundColor: kSecondaryColor,
   );
 }

@@ -82,7 +82,7 @@ class RegisterForm extends StatelessWidget {
         PrimaryButton(
           height: getProportionateScreenHeight(58),
           width: getProportionateScreenWidth(310),
-          text: 'Regístrate',
+          text: 'Registrar cuenta',
           textColor: kLightColor,
           bgColor: kSecondaryColor,
           onPressed: () {
@@ -95,7 +95,7 @@ class RegisterForm extends StatelessWidget {
               );
             }
           },
-          fontSize: width * 4.5,
+          fontSize: width * 4.1,
         ),
         SizedBox(height: getProportionateScreenHeight(20)),
       ]),

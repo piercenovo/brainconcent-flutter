@@ -146,6 +146,7 @@ class WinnerDialog extends StatelessWidget {
                                 state.user!.uid,
                                 gameId,
                               );
+
                               // ignore: use_build_context_synchronously
                               Navigator.of(context)
                                 ..pop()

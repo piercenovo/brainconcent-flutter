@@ -29,7 +29,7 @@ class GameDetailStart extends StatelessWidget {
             'uid': game.uid,
           });
         },
-        fontSize: width * 4.5,
+        fontSize: width * 4.1,
       ),
     );
   }

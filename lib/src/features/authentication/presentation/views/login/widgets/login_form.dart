@@ -58,7 +58,7 @@ class LoginForm extends StatelessWidget {
         PrimaryButton(
           height: getProportionateScreenHeight(58),
           width: getProportionateScreenWidth(310),
-          text: 'Inicia sesión',
+          text: 'Iniciar sesión',
           textColor: kLightColor,
           bgColor: kSecondaryColor,
           onPressed: () {
@@ -67,7 +67,7 @@ class LoginForm extends StatelessWidget {
                   passwordController.text.trim());
             }
           },
-          fontSize: width * 4.5,
+          fontSize: width * 4.1,
         ),
         SizedBox(height: getProportionateScreenHeight(20)),
       ]),

@@ -78,17 +78,17 @@ class StoryDetailChapter extends StatelessWidget {
                         chapterTitles,
                         maxLines: 2,
                         style: TextStyle(
-                            fontSize: width * 3.5,
+                            fontSize: width * 3,
                             fontWeight: FontWeight.w600,
                             color: kSecondaryColorTwo.withOpacity(0.9)),
                       ),
-                      SizedBox(height: height * 0.5),
+                      SizedBox(height: height * 0.1),
                       Text(
                         chapterDuration,
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           color: kGrayColorTwo,
-                          fontSize: width * 2.9,
+                          fontSize: width * 2.8,
                         ),
                       ),
                     ],
