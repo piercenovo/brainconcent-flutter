@@ -71,11 +71,8 @@ class _PuzzleGameScreenState extends State<PuzzleGameScreen> {
     double width = SizeConfig.blockSizeH!;
     double height = SizeConfig.blockSizeV!;
 
-    // final responsive = Responsive.of(context);
-    // final width = responsive.width;
     return ChangeNotifierProvider(
       create: (_) {
-        // final controller = PuzzleController();
         controller.onFinish.listen(
           (_) {
             Timer(
@@ -117,8 +114,6 @@ class _PuzzleGameScreenState extends State<PuzzleGameScreen> {
                 return Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // buildAppBar(height, context),
-                    // SizedBox(height: height * 1.5),
                     Expanded(
                       child: LayoutBuilder(
                         builder: (_, constraints) {
