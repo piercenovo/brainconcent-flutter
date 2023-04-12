@@ -46,3 +46,7 @@ app.*.map.json
 # Keystore
 key.properties
 app/upload-keystore.jks
+
+
+#vscode
+.vscode
